@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Fluid Motion Demo</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 2rem;
+      background: #f9f9f9;
+      font-family: sans-serif;
+    }
+
+    .container {
+      position: relative;
+      width: 100%;
+      height: calc(100vh - 250px);
+      border: 2px dashed #ccc;
+    }
+
+    .box {
+      width: 100px;
+      height: 100px;
+      background: lightblue;
+      border: 2px solid steelblue;
+      border-radius: 10px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transition: transform .3s ease;
+    }
+
+    button {
+      margin-top: 1rem;
+      padding: 0.5rem 1rem;
+      font-size: 1rem;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Fluid Motion Demo (Vanilla)</h1>
+  <div class="container">
+    <div id="box" class="box"></div>
+  </div>
+  <button id="moveBtn">Move Randomly</button>
+
+  <script type="module">
+    import { initFluidMotion } from '../src/core';
+
+    const box = document.getElementById('box');
+    const container = document.querySelector('.container');
+    const button = document.getElementById('moveBtn');
+
+    if (box && container && button) {
+      initFluidMotion(box);
+
+      button.addEventListener('click', () => {
+        const containerRect = container.getBoundingClientRect();
+        const maxX = containerRect.width - box.offsetWidth;
+        const maxY = containerRect.height - box.offsetHeight;
+
+        const x = Math.floor(Math.random() * maxX);
+        const y = Math.floor(Math.random() * maxY);
+
+        box.style.transform = `translate(${x}px, ${y}px)`;
+      });
+    }
+  </script>
+</body>
+
+</html>

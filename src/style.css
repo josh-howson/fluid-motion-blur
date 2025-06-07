@@ -1,0 +1,18 @@
+.fnb-ghost {
+  --angle: 0deg;
+  --stretch: 1;
+  --x: 0px;
+  --y: 0px;
+  filter: blur(var(--blur, 0));
+  left: 0;
+  margin: 0;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  transform: translate(var(--x), var(--y))
+        rotate(var(--angle))
+        scaleY(var(--stretch))
+        rotate(calc(0deg - var(--angle))) !important;
+  transform-origin: center center !important;
+  transition: none;
+}
