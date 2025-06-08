@@ -4,7 +4,7 @@ import cssInjectedByJsPlugin from 'vite-plugin-css-injected-by-js';
 export default defineConfig({
   build: {
     lib: {
-      entry: 'src/main.ts',
+      entry: 'src/index.ts',
       name: 'FluidMotion',
       fileName: (format) => `fluid-motion.${format}.js`
     },

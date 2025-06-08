@@ -21,7 +21,7 @@ export default defineConfig(({ command }) => {
     return {
       build: {
         lib: {
-          entry: path.resolve(__dirname, 'src/main.ts'),
+          entry: path.resolve(__dirname, 'src/index.ts'),
           name: 'FluidMotionBlur',
           fileName: (format) => `fluid-motion-blur.${format}.js`,
           formats: ['es', 'umd'],

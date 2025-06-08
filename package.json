@@ -12,13 +12,9 @@
     "type": "git",
     "url": "https://github.com/josh-howson/fluid-motion-blur.git"
   },
-  "homepage": "https://github.com/josh-howson/fluid-motion-blur#readme",
-  "bugs": {
-    "url": "https://github.com/josh-howson/fluid-motion-blur/issues"
-  },
   "scripts": {
     "dev": "vite",
-    "build": "vite build && tsc && vite build --config vite.config.build.ts",
+    "build": "tsc && vite build && vite build --config vite.config.build.ts",
     "prepublishOnly": "npm run build"
   },
   "devDependencies": {
