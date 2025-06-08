@@ -5,13 +5,13 @@ Motion blur for the web.
 ## Installation
 
 ```bash
-npm install fluid-motion
+npm install fluid-motion-blur
 ```
 
 ## Usage
 
 ```javascript
-import { initFluidMotion } from 'fluid-motion';
+import { initFluidMotion } from 'fluid-motion-blur';
 
 const element = document.getElementById('my-element');
 const controls = initFluidMotion(element, {
