@@ -1,6 +1,6 @@
 {
   "name": "fluid-motion-blur",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Easiest motion blur for the web.",
   "main": "./dist/fluid-motion.umd.js",
   "module": "./dist/fluid-motion.es.js",
