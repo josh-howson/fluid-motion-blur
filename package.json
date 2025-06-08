@@ -1,15 +1,34 @@
 {
   "name": "fluid-motion-blur",
-  "private": true,
-  "version": "0.0.0",
-  "type": "module",
+  "version": "1.0.0",
+  "description": "Easiest motion blur for the web.",
+  "main": "./dist/fluid-motion.umd.js",
+  "module": "./dist/fluid-motion.es.js",
+  "types": "./dist/core.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "dev": "vite",
-    "build": "vite build"
+    "build": "vite build && tsc && vite build --config vite.config.build.ts",
+    "prepublishOnly": "npm run build"
   },
   "devDependencies": {
-    "@types/node": "^22.15.30",
-    "typescript": "~5.8.3",
-    "vite": "^6.3.5"
-  }
+    "typescript": "^5.0.0",
+    "vite": "^5.0.0",
+    "vite-plugin-css-injected-by-js": "^3.0.0",
+    "@types/node": "^20.0.0"
+  },
+  "keywords": [
+    "animation",
+    "motion",
+    "ui",
+    "effects"
+  ],
+  "author": {
+    "name": "Josh Howson",
+    "email": "josh.b.howson@gmail.com",
+    "url": "https://joshhowson.com"
+  },
+  "license": "MIT"
 }
